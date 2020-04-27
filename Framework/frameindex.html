@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Nav -->
+    <video autoplay muted loop id="myVideo" src="asset/starvid.mp4"></video>
+    <div class="topNav">
+        <h1 id="logo">E&P CANVAS</h1>
+        <div id="does">
+            <img src="Asset/undo.png" id="undo" class="do hover" alt="undo">
+            <img src="Asset/redo.png" id="redo" class="do hover" alt="redo">
+        </div>
+    </div>
+    <!-- 
+    <div id="textwrap">
+        <textarea id="inputbox">Hello world</textarea>
+    </div> -->
+
+    <div class="wrapContainer">
+        <!-- canvas -->
+        <div class="container" id="RealCanvs">
+            <canvas id="canvas" width="1800px" height="800px">canvas</canvas>
+        </div>
+
+        <div class="container hidden" id="DraftCanvs">
+            <canvas id="canvas" width="1800px" height="800px">canvas</canvas>
+        </div>
+
+        <!-- functions -->
+        <div class="container">
+            <div class="buttons">
+                <button class="button" id="colourBtn">Colours</button>
+                <button class="button" id="toolBtn">Tools</button>
+
+            </div>
+            <!-- Colour -->
+            <div id="Colours" class="Function">
+
+                <div id="PXbtn">
+                    <button class="linethickness button">2px</button>
+                    <button class="linethickness button">4px</button>
+                    <button class="linethickness button">8px</button>
+                    <button class="linethickness button">16px</button>
+                </div>
+
+
+                <div class="section1 row">
+                    <div class="row1">
+                        <div class="colourball white"></div><br>
+                        <div class="colourball red"></div><br>
+                        <div class="colourball blue"></div><br>
+                    </div>
+
+                    <div class="row2">
+                        <div class="colourball black"></div><br>
+                        <div class="colourball yellow"></div><br>
+                        <div class="colourball green"></div><br>
+                    </div>
+                </div>
+
+                <div class="section2 row">
+                    <div class="row1">
+                        <div class="colourball plus" id="fav1">+</div><br>
+                        <div class="colourball plus" id="fav3">+</div><br>
+
+                    </div>
+                    <div class="row2">
+                        <div class="colourball plus" id="fav2">+</div><br>
+                        <div class="colourball plus" id="fav4">+</div><br>
+
+                    </div>
+                </div>
+
+
+
+                <!-- colourwheel, display on click-->
+                <div id="colourwheel" class="hidden">
+                    <div class="row1">
+                        <div id="c1" class="indicolour"></div>
+                        <div id="c2" class="indicolour"></div>
+                        <div id="c3" class="indicolour"></div>
+                        <div id="c4" class="indicolour"></div>
+                        <div id="c5" class="indicolour"></div>
+                        <div id="c6" class="indicolour"></div>
+                        <div id="c7" class="indicolour"></div>
+                        <div id="c8" class="indicolour"></div>
+                        <div id="c9" class="indicolour"></div>
+                        <div id="c10" class="indicolour"></div>
+                    </div>
+                    <div class="row2">
+                        <div id="c11" class="indicolour"></div>
+                        <div id="c12" class="indicolour"></div>
+                        <div id="c13" class="indicolour"></div>
+                        <div id="c14" class="indicolour"></div>
+                        <div id="c15" class="indicolour"></div>
+                        <div id="c16" class="indicolour"></div>
+                        <div id="c17" class="indicolour"></div>
+                        <div id="c18" class="indicolour"></div>
+                        <div id="c19" class="indicolour"></div>
+                        <div id="c20" class="indicolour"></div>
+                    </div>
+                    <div class="row3">
+                        <div id="c21" class="indicolour"></div>
+                        <div id="c22" class="indicolour"></div>
+                        <div id="c23" class="indicolour"></div>
+                        <div id="c24" class="indicolour"></div>
+                        <div id="c25" class="indicolour"></div>
+                        <div id="c26" class="indicolour"></div>
+                        <div id="c27" class="indicolour"></div>
+                        <div id="c28" class="indicolour"></div>
+                        <div id="c29" class="indicolour"></div>
+                        <div id="c30" class="indicolour"></div>
+                    </div>
+                    <div class="row4">
+                        <div id="c31" class="indicolour"></div>
+                        <div id="c32" class="indicolour"></div>
+                        <div id="c33" class="indicolour"></div>
+                        <div id="c34" class="indicolour"></div>
+                        <div id="c35" class="indicolour"></div>
+                        <div id="c36" class="indicolour"></div>
+                        <div id="c37" class="indicolour"></div>
+                        <div id="c38" class="indicolour"></div>
+                        <div id="c39" class="indicolour"></div>
+                        <div id="c40" class="indicolour"></div>
+                    </div>
+                    <div class="row5">
+                        <div id="c41" class="indicolour"></div>
+                        <div id="c42" class="indicolour"></div>
+                        <div id="c43" class="indicolour"></div>
+                        <div id="c44" class="indicolour"></div>
+                        <div id="c45" class="indicolour"></div>
+                        <div id="c46" class="indicolour"></div>
+                        <div id="c47" class="indicolour"></div>
+                        <div id="c48" class="indicolour"></div>
+                        <div id="c49" class="indicolour"></div>
+                        <div id="c50" class="indicolour"></div>
+                    </div>
+                    <div class="row6">
+                        <div id="c51" class="indicolour"></div>
+                        <div id="c52" class="indicolour"></div>
+                        <div id="c53" class="indicolour"></div>
+                        <div id="c54" class="indicolour"></div>
+                        <div id="c55" class="indicolour"></div>
+                        <div id="c56" class="indicolour"></div>
+                        <div id="c57" class="indicolour"></div>
+                        <div id="c58" class="indicolour"></div>
+                        <div id="c59" class="indicolour"></div>
+                        <div id="c60" class="indicolour"></div>
+                    </div>
+                    <div class="row7">
+                        <div id="c61" class="indicolour"></div>
+                        <div id="c62" class="indicolour"></div>
+                        <div id="c63" class="indicolour"></div>
+                        <div id="c64" class="indicolour"></div>
+                        <div id="c65" class="indicolour"></div>
+                        <div id="c66" class="indicolour"></div>
+                        <div id="c67" class="indicolour"></div>
+                        <div id="c68" class="indicolour"></div>
+                        <div id="c69" class="indicolour"></div>
+                        <div id="c70" class="indicolour"></div>
+                    </div>
+                    <div class="row8">
+                        <div id="c71" class="indicolour"></div>
+                        <div id="c72" class="indicolour"></div>
+                        <div id="c73" class="indicolour"></div>
+                        <div id="c74" class="indicolour"></div>
+                        <div id="c75" class="indicolour"></div>
+                        <div id="c76" class="indicolour"></div>
+                        <div id="c77" class="indicolour"></div>
+                        <div id="c78" class="indicolour"></div>
+                        <div id="c79" class="indicolour"></div>
+                        <div id="c80" class="indicolour"></div>
+                    </div>
+                    <div class="row9">
+                        <div id="c81" class="indicolour"></div>
+                        <div id="c82" class="indicolour"></div>
+                        <div id="c83" class="indicolour"></div>
+                        <div id="c84" class="indicolour"></div>
+                        <div id="c85" class="indicolour"></div>
+                        <div id="c86" class="indicolour"></div>
+                        <div id="c87" class="indicolour"></div>
+                        <div id="c88" class="indicolour"></div>
+                        <div id="c89" class="indicolour"></div>
+                        <div id="c90" class="indicolour"></div>
+                    </div>
+                    <div class="row10">
+                        <div id="c91" class="indicolour"></div>
+                        <div id="c92" class="indicolour"></div>
+                        <div id="c93" class="indicolour"></div>
+                        <div id="c94" class="indicolour"></div>
+                        <div id="c95" class="indicolour"></div>
+                        <div id="c96" class="indicolour"></div>
+                        <div id="c97" class="indicolour"></div>
+                        <div id="c98" class="indicolour"></div>
+                        <div id="c99" class="indicolour"></div>
+                        <div id="c100" class="indicolour"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ToolBox -->
+
+            <div id="Tools" class="Function hidden">
+
+                <div id="PXbtn">
+                    <button class="linethickness button">2px</button>
+                    <button class="linethickness button">4px</button>
+                    <button class="linethickness button">8px</button>
+                    <button class="linethickness button">16px</button>
+                </div>
+
+                <div class="section1">
+                    <div class="row1">
+                        <img class="icon" src="asset/pen.png" alt="pen">
+                        <img class="icon" src="asset/pencil.png" alt="pencil">
+                    </div><br>
+                    <div class="row2">
+                        <img class="icon" src="asset/rubber.png" alt="rubber">
+                        <img class="icon" src="asset/bucket.png" alt="bucket">
+                    </div>
+                </div>
+
+                <div class="section2">
+                    <div class="row1">
+                        <img class="icon" src="asset/circle.svg" alt="">
+                        <img class="icon" src="asset/rectangle.svg" alt="">
+                    </div>
+                    <div class="row2">
+                        <img class="icon" src="asset/triangle.svg" alt="">
+                        <img class="icon" src="asset/diamond.png" alt="">
+                    </div>
+                    <div class="row3">
+                        <img class="icon" src="asset/pentagon.png" alt="">
+                        <img class="icon" src="asset/bubble.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- ORDER: Jquery/canvascommon/shapes/init -->
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- CanvasCommon -->
+    <script src="ToolBox.js"></script>
+    <!-- Shape -->
+    <script src="diamond.js"></script>
+
+
+
+</body>
+
+</html>
