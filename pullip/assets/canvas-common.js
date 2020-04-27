@@ -32,9 +32,7 @@ $("#canvasD").mousemove(function (e) {
     currentFunction.onDrag([origX, origY], [mX, mY], e,rgb);
   }
   // currentFunction.onMm([mX, mY], e);
-  if (filling) {
-    ctxD.fill();
-  };
+
 })
 $("#canvasD").mouseleave(function (e) {
   [origX, origY] = [e.offsetX, e.offsetY];
@@ -47,9 +45,7 @@ $("#canvasD").mouseup(function (e) {
   [mX, mY] = [e.offsetX, e.offsetY];
   dragging = false;
   currentFunction.onMu([origX, origY], [mX, mY], e,rgb);
-  if (filling) {
-    ctxR.fill();
-  }
+  
   cPush();
 })
 $("#canvasD").mouseenter(function (e) {

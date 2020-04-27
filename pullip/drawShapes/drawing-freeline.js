@@ -15,6 +15,8 @@ class FreeDraw extends PaintFunc {
 
 }
 function freeDraw(ctx, coord, e, rgb) {
+    ctx.shadowBlur = 0;
+    ctx.shadowColor = 'transparent';
     ctx.beginPath()
     ctx.strokeStyle = rgb
     ctx.lineJoin = 'round';

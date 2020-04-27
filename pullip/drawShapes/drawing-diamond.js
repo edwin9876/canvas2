@@ -22,6 +22,8 @@ class DrawDiamond extends PaintFunc{
 function drawDia(ctx,ctxD,coord,coord2,rgb){
     ctxD.clearRect(0, 0, canvasD.width, canvasD.height)
     ctx.strokeStyle=rgb
+    ctx.shadowBlur = 0;
+    ctx.shadowColor = 'transparent';
     ctx.beginPath();
     ctx.moveTo(coord[0],coord2[0]);
     ctx.lineTo(coord2[0],coord2[1]);
@@ -29,5 +31,7 @@ function drawDia(ctx,ctxD,coord,coord2,rgb){
     ctx.lineTo((2*(coord[0])-coord2[0]),coord2[1]);
     ctx.lineTo(coord[0],coord2[0]);
     ctx.stroke();
-    console.log(rgb)
+    if (filling) {
+        ctx.fill();
+      }
 }

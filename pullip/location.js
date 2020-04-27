@@ -42,7 +42,6 @@ let APIcall = function (lat, long) {
       formatted = formatted.split(':')
 
       // Return your formatted time
-      console.log(formatted);
    }
 ConvertTime(sunrise)
 ConvertTime(sunset)
@@ -60,7 +59,6 @@ ConvertTime(sunset)
 
     let now = new Date() //sets a time right now
     now= now.getUTCHours();
-    console.log(now);
 
 
 //day time anytimezone will work

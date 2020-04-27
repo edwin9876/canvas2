@@ -10,11 +10,13 @@ class Rubber extends PaintFunc {
     }
 
     onDrag(coord, coord2, e, rgb) {
-        rubber(ctxR, coord, e, rgb)
+        rubber(ctxR, coord, e)
     }
 
 }
-function rubber(ctx, coord, e, rgb) {
+function rubber(ctx, coord, e) {
+    ctx.shadowBlur = 0;
+    ctx.shadowColor = 'transparent';
     ctx.beginPath()
     ctx.strokeStyle = "white"
     ctx.fillStyle = "white"

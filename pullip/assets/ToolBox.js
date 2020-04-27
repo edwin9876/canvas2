@@ -37,14 +37,17 @@ window.addEventListener("load", () => {
 
 let colourchange = function () {
     // fav1
-    $('#fav1').on('click', function () {
+    $('#fav1').on('dblclick', function () {
         $('#colourwheel').removeClass('hidden')
+        $("#colourwheel").mouseleave(function(){
+            $('#colourwheel').addClass('hidden')})
         // $('.plus').addClass('hidden')
     })
     //click colour, add to fav colour
     $('.indicolour').on('click', function () {
         let bgc = $(this).css("backgroundColor")
         $('#fav1').css("backgroundColor", bgc)
+        $('#fav1 span').addClass('hidden')
         $('#colourwheel').addClass('hidden')
         // $('.plus').removeClass('hidden')
         $('.indicolour').unbind();
@@ -56,14 +59,17 @@ $('#fav1').on('click', colourchange)
 
 let colourchange2 = function () {
     //fav2
-    $('#fav2').on('click', function () {
+    $('#fav2').on('dblclick', function () {
         $('#colourwheel').removeClass('hidden')
+        $("#colourwheel").mouseleave(function(){
+            $('#colourwheel').addClass('hidden')})
         // $('.plus').addClass('hidden')
     })
     //click colour, add to fav colour
     $('.indicolour').on('click', function () {
         let bgc = $(this).css("backgroundColor")
         $('#fav2').css("backgroundColor", bgc)
+        $('#fav2 span').addClass('hidden')
         $('#colourwheel').addClass('hidden')
         // $('.plus').removeClass('hidden')
         $('.indicolour').unbind();
@@ -75,14 +81,17 @@ $('#fav2').on('click', colourchange2)
 //
 let colourchange3 = function () {
     //fav3
-    $('#fav3').on('click', function () {
+    $('#fav3').on('dblclick', function () {
         $('#colourwheel').removeClass('hidden')
+        $("#colourwheel").mouseleave(function(){
+            $('#colourwheel').addClass('hidden')})
         // $('.plus').addClass('hidden')
     })
     //click colour, add to fav colour
     $('.indicolour').on('click', function () {
         let bgc = $(this).css("backgroundColor")
         $('#fav3').css("backgroundColor", bgc)
+        $('#fav3 span').addClass('hidden')
         $('#colourwheel').addClass('hidden')
         // $('.plus').removeClass('hidden')
         $('.indicolour').unbind();

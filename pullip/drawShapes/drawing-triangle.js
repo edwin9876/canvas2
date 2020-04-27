@@ -30,4 +30,9 @@ function drawTriangle(ctx, ctxD, coord, coord2,rgb) {
     ctx.lineTo(coord2[0],coord2[1]);
     ctx.lineTo((coord[0]-(coord2[0]-coord[0])),coord2[1]);
     ctx.lineTo(coord[0],coord[1]);
-    ctx.stroke();}
+    ctx.stroke();
+    if (filling) {
+        ctx.fill();
+      }
+}
+

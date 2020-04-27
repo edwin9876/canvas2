@@ -33,6 +33,8 @@ class DrawOval extends PaintFunc {
 }
 function drawOval(ctx, ctxD, coord, coord2,rgb) {
     ctxD.clearRect(0, 0, canvasD.width, canvasD.height)
+    ctx.shadowBlur = 0;
+    ctx.shadowColor = 'transparent';
     ctx.strokeStyle=rgb
     ctx.beginPath();
     ctx.moveTo(coord[0], coord[1] + (coord2[1] - coord[1]) / 2)
@@ -40,4 +42,7 @@ function drawOval(ctx, ctxD, coord, coord2,rgb) {
     ctx.bezierCurveTo(coord2[0], coord2[1], coord[0], coord2[1], coord[0], coord[1] + (coord2[1] - coord[1]) / 2);
     ctx.closePath()
     ctx.stroke();
+    if (filling) {
+        ctx.fill();
+      }
 }
