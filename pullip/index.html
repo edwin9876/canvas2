@@ -33,7 +33,7 @@
             <h1 class="logo animated bounceInDown delay-3s highlight">CANVAS</h1>
         </div>
 
-        <button onclick="getLocation()" class="button animated pulse infinite slow" id="location">Let's start!</button>
+        <!-- <button onclick="getLocation()" class="button animated pulse infinite slow" id="location">Let's start!</button> -->
 
         <p id="demo" class="hidden" style="color: white;"></p>
 
@@ -109,22 +109,26 @@
                         <img class="icon shapes hidden" src="Icons/Btriangle.png" alt="triangle">
                         <img class="icon shapes hidden" src="Icons/Bdiamond.png" alt="diamond">
 
-                        <img class="icon" src="Icons/pen.png" alt="pen"><br><br>
-                        <img class="icon" src="icons/bucket.png" alt="changelater"><br>
+                        <img class="icon" src="Icons/pen.png" alt="pen" id="pen"><br><br>
+                        <img class="icon" id="stamp" src="icons/stamp.png" alt="stamp"><br>
+
+                        <!-- stamp image hidden -->
+                        <img id="stamplogo" width="10" height="10" class="hidden" src="icons/logostamp1.png"
+                            alt="logostamp">
+
                     </div>
                     <br>
                     <div class="row3">
-                        <img class="icon wshapes" src="Icons/pentagon.png" alt="pentagon">
-                        <img class="icon wshapes" src="Icons/bubble.png" alt="bubble">
-
-                        <img class="icon shapes hidden" src="Icons/Bpentagon.png" alt="pentagon">
-                        <img class="icon shapes hidden" src="Icons/Bbubble.png" alt="bubble"><br>
+                        <img class="icon " src="icons/drag.png" alt="drag">
+                        <img class="icon " src="icons/pencil.png" alt="pencil">
 
                         <img class="icon" src="Icons/rubber.png" alt="rubber"><br><br>
                         <img class="icon" id="textbtn" src="icons/text.png" alt="text"><br>
 
                     </div>
                     <br>
+
+
 
 
                 </div>
@@ -268,20 +272,22 @@
         <!-- <script src="assets/FunctionBox.js"></script> -->
         <script src="assets/ToolBox.js"></script>
         <!-- Shape -->
+        <!-- <script src="location.js"></script> -->
         <script src="drawShapes/drawing-freeline.js"></script>
         <script src="drawShapes/drawing-rectangle.js"></script>
         <script src="drawShapes/drawing-oval.js"></script>
         <script src="drawShapes/drawing-straightline.js"></script>
-        <script src="drawShapes/drawing-pentagon.js"></script>
         <script src="drawShapes/drawing-triangle.js"></script>
         <script src="drawShapes/drawing-diamond.js"></script>
         <script src="drawShapes/rubber.js"></script>
+        <script src="drawShapes/drawing-inkpen.js"></script>
         <script src="colorChange.js"></script>
+        <script src="cursor.js"></script>
+        <script src="stamp.js"></script>
         <script src="fillingBucket.js"></script>
+        <script src="textBox.js"></script>
         <script src="lineWidth.js"></script>
         <script src="redo_undo.js"></script>
-        <script src="textBox.js"></script>
-        <script src="location.js"></script>
 
         <script type="text/javascript">
             currentFunction = new FreeDraw(ctxD, ctxR);

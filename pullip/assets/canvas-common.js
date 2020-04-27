@@ -8,7 +8,7 @@ let origX, origY,origX2, origY2, mX, mY
 let rgb = "rgb(10,10,10)"
 let filling
 let pixelStack, canvasRData, origPos, fillColorR, fillColorG, fillColorB, startR, startG, startB
-let imgData
+let imgData = new Array (1);
 
 
 ctxD.lineJoin = 'round';

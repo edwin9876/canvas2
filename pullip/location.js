@@ -63,32 +63,28 @@ ConvertTime(sunset)
     console.log(now);
 
 
-    //night
-    if (sunrise[0]> now || now > sunset[0]) {
-      $('#night').removeClass('hidden')
-      $('.logo').css('color', 'rgb(255, 255, 255, 0.6)')
-      $('#location').addClass('hidden')
-      $('.highlight').css('color', 'rgb(203, 255, 100, 0.6)')
-    }
-
-
-//sunrise and sunset time
-
-else if(sunrise[0] == now || now === sunset[0]) {
-  $('#sun').removeClass('hidden')
-  $('.logo').css('color', 'rgb(255, 255, 255, 0.8)')
-  $('#location').addClass('hidden')
-  $('.highlight').css('color', 'red')
-}
-
-
-    //day
-    else {
-     
+//day time anytimezone will work
+    if
+    ( ((24-(24-sunrise[0]))< now) && now<24 || (0<now && now<sunset[0]) )
+    {     
       $('#day').removeClass('hidden')
       $('.logo').css('color', 'orange')
       $('.highlight').css('color', 'rgb(243, 210, 101)')
       $('#location').addClass('hidden')
+    }
+//sunset, sunrise
+else if(sunrise[0] == now || now == sunset[0]) {
+    $('#sun').removeClass('hidden')
+    $('.logo').css('color', 'rgb(255, 255, 255, 0.8)')
+    $('#location').addClass('hidden')
+    $('.highlight').css('color', 'red')
+  }
+//night
+else{
+      $('#night').removeClass('hidden')
+      $('.logo').css('color', 'rgb(255, 255, 255, 0.6)')
+      $('#location').addClass('hidden')
+      $('.highlight').css('color', 'rgb(203, 255, 100, 0.6)')
     }
 
     // $('#times').append(`<p>Sunrise is at: ${sunrise} </p><br/> <p>Sunset is at: ${sunset}</p>`)
