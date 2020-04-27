@@ -1,6 +1,6 @@
-$(".section2 .row2 .icon:eq(1)").on("click", function () {
-    currentFunction = new DrawDiamond(ctxD, ctxR);
-  })
+// $(".section2 .row2 .icon:eq(1)").on("click", function () {
+//     currentFunction = new DrawDiamond(ctxD, ctxR);
+//   })
 class DrawDiamond extends PaintFunc{
     constructor(ctxR,ctxD){
         super();
@@ -21,9 +21,9 @@ class DrawDiamond extends PaintFunc{
 }
 function drawDia(ctx,ctxD,coord,coord2,rgb){
     ctxD.clearRect(0, 0, canvasD.width, canvasD.height)
-    ctx.strokeStyle=rgb
-    ctx.shadowBlur = 0;
-    ctx.shadowColor = 'transparent';
+    // ctx.strokeStyle=rgb
+    // ctx.shadowBlur = 0;
+    // ctx.shadowColor = 'transparent';
     ctx.beginPath();
     ctx.moveTo(coord[0],coord2[0]);
     ctx.lineTo(coord2[0],coord2[1]);

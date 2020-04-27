@@ -20,8 +20,7 @@ function rubber(ctx, coord, e) {
     ctx.beginPath()
     ctx.strokeStyle = "white"
     ctx.fillStyle = "white"
-    ctx.lineJoin = 'round';
-    ctx.lineCap = 'round';
+    ctx.lineJoin = ctx.lineCap =  'round' 
     ctx.moveTo(coord[0], coord[1])
     ctx.lineTo(e.offsetX, e.offsetY);
     ctx.stroke();

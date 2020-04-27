@@ -12,27 +12,6 @@ window.addEventListener("load", () => {
 //check the time and change background(5am-7pm/7pm-5am)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //click plus then colourwheel comes up
 
 let colourchange = function () {

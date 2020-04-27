@@ -18,7 +18,6 @@ class InkPen extends PaintFunc {
 function inkPen(ctx,coord,e) {
     ctx.beginPath()
 
-    ctx.lineWidth = 5;
     ctx.lineJoin = ctx.lineCap = 'round';
     ctx.shadowBlur = 10;
     ctx.shadowColor = 'rgb(0, 0, 0)';

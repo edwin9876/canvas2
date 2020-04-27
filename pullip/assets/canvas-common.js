@@ -11,13 +11,14 @@ let pixelStack, canvasRData, origPos, fillColorR, fillColorG, fillColorB, startR
 let imgData = new Array (1);
 
 
-ctxD.lineJoin = 'round';
-ctxD.lineCap = 'round';
-ctxR.lineJoin = 'round';
-ctxR.lineCap = 'round';
+// ctxD.lineJoin = 'round';
+// ctxD.lineCap = 'round';
+// ctxR.lineJoin = 'round';
+// ctxR.lineCap = 'round';
 
 
 $("#canvasD").mousedown(function (e) {
+  
   [origX, origY] = [e.offsetX, e.offsetY];
   dragging = true;
   currentFunction.onMd([origX, origY],rgb.match(/\d+/g),);
@@ -38,7 +39,7 @@ $("#canvasD").mouseleave(function (e) {
   [origX, origY] = [e.offsetX, e.offsetY];
   [mX, mY] = [e.offsetX, e.offsetY];
   dragging = false;
-  currentFunction.onMl([origX, origY], [mX, mY], e)
+  // currentFunction.onMl([origX, origY], [mX, mY], e)
   
 })
 $("#canvasD").mouseup(function (e) {

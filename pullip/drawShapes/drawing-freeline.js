@@ -1,4 +1,4 @@
-$(".section2 .row2 .icon:eq(-2)").on("click", function () {
+$(".section2 .row3 .icon:eq(1)").on("click", function () {
     currentFunction = new FreeDraw(ctxR, ctxD);
 })
 
