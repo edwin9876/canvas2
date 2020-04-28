@@ -7,6 +7,7 @@ function getLocation() {
 
   } else {
     x.innerHTML = "Geolocation is not supported by this browser.";
+    document.getElementById("location").classList.remove
   }
 }
 
